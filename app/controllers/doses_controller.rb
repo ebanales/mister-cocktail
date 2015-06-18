@@ -14,6 +14,7 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     @dose = @cocktail.doses.build(dose_params)
+    # plural because of relation in model. Is a ralation has_many: doses
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
