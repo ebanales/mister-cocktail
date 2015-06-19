@@ -1,7 +1,11 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :name, label: 'Cocktail name:' %>
-  <%= f.button :submit %>
-<% end %>
+<div class="form-input">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, label: 'Cocktail name:' %>
+    <p><%= f.label :picture %></p>
+    <p><%= f.file_field :picture, class: "button-picture" %></p>
+    <%= f.button :submit %>
+  <% end %>
+</div>
 
 

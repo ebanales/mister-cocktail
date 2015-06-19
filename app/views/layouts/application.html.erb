@@ -9,8 +9,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <div class="nav text-center" id="toggle">
+      <div>
+        <%= link_to root_path do %>
+          <%= image_tag 'logo-darker.png' %>
+        <% end %>
+      </div>
+       <p><%= link_to 'About' %></p>
+       <p><%= link_to 'Cocktails', root_path %></p>
+       <p><%= link_to 'Add cocktail', new_cocktail_path %></p>
+    </div>
+  </nav>
 
 <%= yield %>
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 </body>
 </html>
